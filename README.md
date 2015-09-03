@@ -8,6 +8,9 @@
 [Lolcat Values]:      https://github.com/sandralundgren/lolcat-css-values
 
 
+![alt tag](http://i.imgur.com/VGdmJfx.jpg)
+
+
 ### Lolcat syntax
 
 ```css

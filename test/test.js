@@ -16,7 +16,7 @@ var test = function (input, output, opts, done) {
     });
 };
 
-var lolcatPropertiesTest = function (lolcat, english, value) {
+var lolPropertiesTest = function (lolcat, english, value) {
     it('converts ' + lolcat + ' to ' + english, function (done) {
         test(
             'a{ ' + lolcat + ': ' + value + '; }',
@@ -27,7 +27,7 @@ var lolcatPropertiesTest = function (lolcat, english, value) {
     });
 };
 
-var lolcatValuesTest = function (lolcat, english, property) {
+var lolValuesTest = function (lolcat, english, property) {
     it('converts ' + lolcat + ' to ' + english, function (done) {
         test(
             'a{ ' + property + ': ' + lolcat + '; }',
@@ -42,12 +42,12 @@ describe('postcss-lolcat-stylesheets', function () {
 
     // Test Properties
     _.forEach(lolProperties, function (value, key) {
-        lolcatPropertiesTest(value, key, '10px');
+        lolPropertiesTest(value, key, '10px');
     });
 
     // Test Values
     _.forEach(lolValues, function (value, key) {
-        lolcatValuesTest(value, key, 'color');
+        lolValuesTest(value, key, 'color');
     });
 
     // Test !important

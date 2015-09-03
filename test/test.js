@@ -42,12 +42,12 @@ describe('postcss-lolcat-stylesheets', function () {
 
     // Test Properties
     _.forEach(lolProperties, function (value, key) {
-        lolPropertiesTest(value, key, '10px');
+        lolcatPropertiesTest(value, key, '10px');
     });
 
     // Test Values
     _.forEach(lolValues, function (value, key) {
-        lolValuesTest(value, key, 'color');
+        lolcatValuesTest(value, key, 'color');
     });
 
     // Test !important

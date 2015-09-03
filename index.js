@@ -5,15 +5,15 @@ var lolValues     = require('lolcat-css-values');
 
 module.exports = postcss.plugin('postcss-lolcat-stylesheets', function (opts) {
 
-    opts = opts || {};  // your own declarations can be added in this object
-
-//                    key : value
-//   'animation-direction': 'animashun-direcshun'  lolproperties
-//                 'right': 'rite'                 lolvalue
+    // your own declarations can be added in this object
+    opts = opts || {};
+    //                    key : value
+    //   'animation-direction': 'animashun-direcshun'  lolproperties
+    //                 'right': 'rite'                 lolvalue
 
     return function (css) {
 
-        css.walkDeclars(function transformDeclars(declars) {
+        css.walkDecls(function transformDeclars(declars) {
 
             // Properties
             _.forEach(lolProperties, function (value, key) {

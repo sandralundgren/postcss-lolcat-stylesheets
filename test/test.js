@@ -1,6 +1,6 @@
-var _             = require('lodash');
-var postcss       = require('postcss');
-var expect        = require('chai').expect;
+var _ = require('lodash');
+var postcss = require('postcss');
+var expect  = require('chai').expect;
 var lolProperties = require('lolcat-css-properties');
 var lolValues     = require('lolcat-css-values');
 
@@ -50,7 +50,7 @@ describe('postcss-lolcat-stylesheets', function () {
         lolValuesTest(value, key, 'color');
     });
 
-    // Test !important
+    // Test important
     it('converts !srsly to !important', function (done) {
         test(
             'a{ color: white !srsly; }',

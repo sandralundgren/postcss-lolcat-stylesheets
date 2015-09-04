@@ -13,24 +13,24 @@ module.exports = postcss.plugin('postcss-lolcat-stylesheets', function (opts) {
 
     return function (css) {
 
-        css.walkDecls(function transformDeclars(declars) {
+        css.walkDecls(function transformdecl(decl) {
 
             // Properties
             _.forEach(lolProperties, function (value, key) {
-                if (declars.prop === value) {
-                    declars.prop = key;
+                if (decl.prop === value) {
+                    decl.prop = key;
                 }
             });
 
             // Values
             _.forEach(lolValues, function (value, key) {
-                declars.value = declars.value.replace(value, key);
+                decl.value = decl.value.replace(value, key);
             });
 
             // !Important
-            if (declars.value.indexOf('!srsly') >= 0) {
-                declars.value = declars.value.replace(/\s*!srsly\s*/, '');
-                declars.important = true;
+            if (decl.value.indexOf('!srsly') >= 0) {
+                decl.value = decl.value.replace(/\s*!srsly\s*/, '');
+                decl.important = true;
             }
         });
 

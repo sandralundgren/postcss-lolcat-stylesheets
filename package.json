@@ -19,7 +19,7 @@
   "dependencies": {
     "lodash": "^3.10.1",
     "lolcat-css-properties": "^1.0.0",
-    "lolcat-css-values": "^1.0.0",
+    "lolcat-css-values": "^1.0.2",
     "postcss": "^5.0.4"
   },
   "devDependencies": {
